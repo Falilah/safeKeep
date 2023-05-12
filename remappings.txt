@@ -1,0 +1,3 @@
+solmate.git/=lib/solmate/src/
+@openzeppelin/=node_modules/@openzeppelin/
+forge-std/=lib/forge-std/src/
