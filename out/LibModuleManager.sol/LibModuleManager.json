@@ -1,0 +1,631 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220d284bf059e7747a65f11bbbae0177d4bfe4566144a55943ea33e0c756d441b2964736f6c63430008120033",
+    "sourceMap": "163:281:18:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;163:281:18;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220d284bf059e7747a65f11bbbae0177d4bfe4566144a55943ea33e0c756d441b2964736f6c63430008120033",
+    "sourceMap": "163:281:18:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Vault/libraries/LibModuleManager.sol\":\"LibModuleManager\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/Vault/facets/DMSFacet.sol\":{\"keccak256\":\"0xb44ea07e5553349f60acdd5ea03dce4cf6a9be22729c14b46d057efcffd571fe\",\"urls\":[\"bzz-raw://d976da95df20f10fd1e5d3d7ce015c468651e98a1ee638910ea76e8a84de848c\",\"dweb:/ipfs/QmW8UR6KTfFVKxMaawPAbi5hrLoGmLxnbGjn9Qds3DwFeG\"]},\"contracts/Vault/facets/DiamondCutFacet.sol\":{\"keccak256\":\"0x79c5db6de534885727f3d49c2a9019fa61c7bffc29c6739cd2e8ddb4269792b0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd074d381e2459c4abec48083c668c6ddeceee1aaa2be58710cce8a47722abf1\",\"dweb:/ipfs/QmXapbYiQ1A52435rHny25ncCLHpvjniyj6H9JMBixqQNT\"]},\"contracts/Vault/facets/DiamondLoupeFacet.sol\":{\"keccak256\":\"0x72e14d9679728761fcbc49770ea8426d30cd930a4bc100eb31d654fa724f180b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40574e2044dd1e632acbc8767553c461307065bb0a0533beff44678625dcb82e\",\"dweb:/ipfs/QmVTXZWhH8bDnFBUDHgubQgt1ZTk1swjoDxVwvyY9ta2ER\"]},\"contracts/Vault/facets/ERC1155Facet.sol\":{\"keccak256\":\"0x0693ac0c317e55ca4ecfb2d212dc29651e177414e67528e7a09a6d48dd4e4d30\",\"urls\":[\"bzz-raw://ad662cb22719df6e73e0f550834f2bd47d9ade8aeb439dde0d4016efbcc17c09\",\"dweb:/ipfs/QmW2CRN2MmQ9vCLztf2tPXU4WSxT6a3uWDse8nBePaQPh7\"]},\"contracts/Vault/facets/ERC20Facet.sol\":{\"keccak256\":\"0xf07dcbef6dcd0197e517b6139f1043790020c214c903e15302c466defa4a0515\",\"urls\":[\"bzz-raw://87632593bcf4d34f4ededf97768267eced2573750000812c0958968407637bda\",\"dweb:/ipfs/QmbVNyceunrVUoJNkowby1jFeuSfddJNGXkNiPceUFee9X\"]},\"contracts/Vault/facets/ERC721Facet.sol\":{\"keccak256\":\"0x2e51b529516b73471aeb2fa53f226105c68bff08138b6e21fdd7c1b8c4d2dfe3\",\"urls\":[\"bzz-raw://b19063b6422dcfbc2a64a93ebff9ed7b61d4a502197134655ae50b60052544e2\",\"dweb:/ipfs/QmWwcU8C1wrCYGE3pRTRFm4qqppZzeHUxzuDTBAxZCFNka\"]},\"contracts/Vault/libraries/LibArrayHelpers.sol\":{\"keccak256\":\"0xbb3704596a7c0a54408803292f7825f8b5d3537f1c67be87705728cf5185350c\",\"urls\":[\"bzz-raw://26a7e1ca2913abdf1db51e3fc9836a256bd53c9aa50c8d275fc66b843f0ee6c0\",\"dweb:/ipfs/QmQXR6SWnp4PFUc9TsW3AeoU7jgGu7DGB3RXzrKXvMpfef\"]},\"contracts/Vault/libraries/LibCore.sol\":{\"keccak256\":\"0x396b9c1526ff054ba263845011172164b235245690c225999536eddba2a1c271\",\"urls\":[\"bzz-raw://44614712391c9a0bc34d6653675096c0ba61ba69e62191de0b1a43289ea0a8d0\",\"dweb:/ipfs/QmdyBLL2dJWrr6dubYKKd4hJWRWDgosA8Wm6GUH7rYcX9C\"]},\"contracts/Vault/libraries/LibDMS.sol\":{\"keccak256\":\"0x9e21877024ffd55f516a2d8ad52a5f2dab3df7558c872352e23ad9b72729fcf8\",\"urls\":[\"bzz-raw://d4d255321249aae710372f33e6f20a182993b1be8c88dccf1b846cfa72516fee\",\"dweb:/ipfs/QmYgZtUoksTZrd2W1uxQgxCBw1YgSHux7ZWiYbUZvcSq7H\"]},\"contracts/Vault/libraries/LibDMSGuards.sol\":{\"keccak256\":\"0xe91f90f44329aab91d115930409f9f5ae2653da192bc29e4ee5f0c9ec5bf62b7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e2b443a6fb304d2e345f5ae958002c88ea6786fd6061f89256e204ce35e4b0d6\",\"dweb:/ipfs/QmQ74oqMHXefJHm3zYiWb2DkVwowacnqVoc3Ti98bNmLLd\"]},\"contracts/Vault/libraries/LibDiamond.sol\":{\"keccak256\":\"0x2ab3387cb04071539c1c38068f277df334909a8f9199ba27e8053d8922402f32\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://164e4dd5c00b31f0df64529bb69038b7ebafe309f86afed2302ddff65fe9dcda\",\"dweb:/ipfs/QmSUB8w9cZ6osr9NAUEtT7hT2ukXHkQ9LgcnnGC52WW65i\"]},\"contracts/Vault/libraries/LibErrors.sol\":{\"keccak256\":\"0xce4b3cdf58fe745cc23fd3acbb93d388d25343450f15c8bb482b6ef5527339e9\",\"urls\":[\"bzz-raw://da53ef58e1a9f6ff1b32a82c76a5a34e76af6c2a3cb74e50018c539b411967f4\",\"dweb:/ipfs/QmVYGVvW5oBvk6W3Xysr8MoupewJtP3EKwDWpWG9WNjw8v\"]},\"contracts/Vault/libraries/LibGuards.sol\":{\"keccak256\":\"0xf52aacbe49d7f2b29544b5dd8a35b655b59610328749090a48b431b62975febc\",\"urls\":[\"bzz-raw://a2263aea89b52e043b6420d912209c21c6cca5e30e743e529fe666e278faabcb\",\"dweb:/ipfs/QmX4xifn2npbojrmQbbtWoqezzuS62nErpndovFEV6BHXe\"]},\"contracts/Vault/libraries/LibLayoutSilo.sol\":{\"keccak256\":\"0xad5bf2fd20542e2ec80963adefd3b3163012c65676c3f1c5ece04ba166216a32\",\"urls\":[\"bzz-raw://71d13de6e8c68c2ab89a8ea91a5a7c5c89d42db40453123307e3c13d6601ed3e\",\"dweb:/ipfs/QmTaT8meM43jzLavynfaajrtZvG1fzZmuxvaTw6qHDWqkU\"]},\"contracts/Vault/libraries/LibModuleManager.sol\":{\"keccak256\":\"0x45ba44605d923a37a5b70b614172e201c0f9d28e58f4c557cdcc04bc0317f20e\",\"urls\":[\"bzz-raw://5684e4b22392e44c8731109c54fd860a78b089dfa9fd516402d162c322efaa6d\",\"dweb:/ipfs/QmSumUwfERNwZht89MZCZzAdmhJjX2tu9y67iNw1XMZsPd\"]},\"contracts/Vault/libraries/LibStorageBinder.sol\":{\"keccak256\":\"0xa7a817c811e8d38ba1a54d5e5822c9259dd3df152b39fd749fd65dead54e110e\",\"urls\":[\"bzz-raw://188731abe47fe3aadb47974c02346465ed12e61147e97b86190caf903a8d53e3\",\"dweb:/ipfs/QmScDn6v668MgC1XxvLYLfrZW6rt1rAdTWq2v1XPHqdKbq\"]},\"contracts/Vault/libraries/LibTokens.sol\":{\"keccak256\":\"0x780c7cf2463b846806b9d3fe0cf13ea0d6077858e054f31468b116dfa4b8c22a\",\"urls\":[\"bzz-raw://a8d48898890e1ac8ce19e62e3fdcb596a97599b4b4755da613664882fdd583e9\",\"dweb:/ipfs/QmYrbvVAqWzxTubmznp2ahJ3Z2vWPr2FLptQzbkwHLvP8x\"]},\"contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765\",\"dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771\"]},\"contracts/interfaces/IDiamondLoupe.sol\":{\"keccak256\":\"0xac7e82142cf9e2eb13ba80ba52aa950e4b73aebaec78cbd747ec1b4598b01c08\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40d8edd4ef84f1cea2dbd614208f29982acd1731e93b045a3651e146fccb581e\",\"dweb:/ipfs/QmPcJ67WHWkVTNGubhFyEvBFxWLBCP3QvzwSzZgvZAQYA2\"]},\"contracts/interfaces/IERC1155.sol\":{\"keccak256\":\"0xd98d62a7cfec5b7bb199e6b11dda1427f68d97c1e890226846e444c5fdd705ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://eda955f978dc917e6d719bde0d70c4e63dd73c9dd88fcebbf65b4cb75611117e\",\"dweb:/ipfs/Qmf9ohhubgRVGpudeE7XUxjBhG25MAnLmFa1qjxnHYpZQm\"]},\"contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0x90ee0607a08a2d6e21132dc60810936cc5cd65b077d59f02dfb42c6b8be52b2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0038bb2c3e17abc99cbd60166a8aac884b313a6ad929ebcfb4f6770cd5f02ffe\",\"dweb:/ipfs/QmZYsuSrQu5P4RX1yS6YT2r7VTaAPaWkQb58bpfAt4Ya9r\"]},\"contracts/interfaces/IERC20.sol\":{\"keccak256\":\"0xcfbfd19eb6ef183ce50be075607af71e64f9a5ca27c02a85cbfff879bfc737dc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d48f27073c98b5642ed46b44a248ecb898129ee9643721603d73840a09ce1788\",\"dweb:/ipfs/Qma8Nj2vE62mjXfqBdLHTNCSGDz4XYceVLoCxjSWrz6wfP\"]},\"contracts/interfaces/IERC721.sol\":{\"keccak256\":\"0x6eb3c263c07f182d27d3b60990e5411bb8367c8b72d951245191c8f26db91931\",\"urls\":[\"bzz-raw://6faa1b8e94fcb85bd342176447948a98b6dec378f893b6273e74e49d778440de\",\"dweb:/ipfs/QmRvDKdZkPdLkrjh6qayWj9vPkbf4fo4nPKnQ7CYjoQRd3\"]},\"contracts/interfaces/IModuleData.sol\":{\"keccak256\":\"0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda\",\"dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ\"]},\"contracts/interfaces/IVaultDiamond.sol\":{\"keccak256\":\"0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6\",\"urls\":[\"bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7\",\"dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/solmate/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":solmate.git/=lib/solmate/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/Vault/libraries/LibModuleManager.sol": "LibModuleManager"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/Vault/facets/DMSFacet.sol": {
+        "keccak256": "0xb44ea07e5553349f60acdd5ea03dce4cf6a9be22729c14b46d057efcffd571fe",
+        "urls": [
+          "bzz-raw://d976da95df20f10fd1e5d3d7ce015c468651e98a1ee638910ea76e8a84de848c",
+          "dweb:/ipfs/QmW8UR6KTfFVKxMaawPAbi5hrLoGmLxnbGjn9Qds3DwFeG"
+        ],
+        "license": null
+      },
+      "contracts/Vault/facets/DiamondCutFacet.sol": {
+        "keccak256": "0x79c5db6de534885727f3d49c2a9019fa61c7bffc29c6739cd2e8ddb4269792b0",
+        "urls": [
+          "bzz-raw://bd074d381e2459c4abec48083c668c6ddeceee1aaa2be58710cce8a47722abf1",
+          "dweb:/ipfs/QmXapbYiQ1A52435rHny25ncCLHpvjniyj6H9JMBixqQNT"
+        ],
+        "license": "MIT"
+      },
+      "contracts/Vault/facets/DiamondLoupeFacet.sol": {
+        "keccak256": "0x72e14d9679728761fcbc49770ea8426d30cd930a4bc100eb31d654fa724f180b",
+        "urls": [
+          "bzz-raw://40574e2044dd1e632acbc8767553c461307065bb0a0533beff44678625dcb82e",
+          "dweb:/ipfs/QmVTXZWhH8bDnFBUDHgubQgt1ZTk1swjoDxVwvyY9ta2ER"
+        ],
+        "license": "MIT"
+      },
+      "contracts/Vault/facets/ERC1155Facet.sol": {
+        "keccak256": "0x0693ac0c317e55ca4ecfb2d212dc29651e177414e67528e7a09a6d48dd4e4d30",
+        "urls": [
+          "bzz-raw://ad662cb22719df6e73e0f550834f2bd47d9ade8aeb439dde0d4016efbcc17c09",
+          "dweb:/ipfs/QmW2CRN2MmQ9vCLztf2tPXU4WSxT6a3uWDse8nBePaQPh7"
+        ],
+        "license": null
+      },
+      "contracts/Vault/facets/ERC20Facet.sol": {
+        "keccak256": "0xf07dcbef6dcd0197e517b6139f1043790020c214c903e15302c466defa4a0515",
+        "urls": [
+          "bzz-raw://87632593bcf4d34f4ededf97768267eced2573750000812c0958968407637bda",
+          "dweb:/ipfs/QmbVNyceunrVUoJNkowby1jFeuSfddJNGXkNiPceUFee9X"
+        ],
+        "license": null
+      },
+      "contracts/Vault/facets/ERC721Facet.sol": {
+        "keccak256": "0x2e51b529516b73471aeb2fa53f226105c68bff08138b6e21fdd7c1b8c4d2dfe3",
+        "urls": [
+          "bzz-raw://b19063b6422dcfbc2a64a93ebff9ed7b61d4a502197134655ae50b60052544e2",
+          "dweb:/ipfs/QmWwcU8C1wrCYGE3pRTRFm4qqppZzeHUxzuDTBAxZCFNka"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibArrayHelpers.sol": {
+        "keccak256": "0xbb3704596a7c0a54408803292f7825f8b5d3537f1c67be87705728cf5185350c",
+        "urls": [
+          "bzz-raw://26a7e1ca2913abdf1db51e3fc9836a256bd53c9aa50c8d275fc66b843f0ee6c0",
+          "dweb:/ipfs/QmQXR6SWnp4PFUc9TsW3AeoU7jgGu7DGB3RXzrKXvMpfef"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibCore.sol": {
+        "keccak256": "0x396b9c1526ff054ba263845011172164b235245690c225999536eddba2a1c271",
+        "urls": [
+          "bzz-raw://44614712391c9a0bc34d6653675096c0ba61ba69e62191de0b1a43289ea0a8d0",
+          "dweb:/ipfs/QmdyBLL2dJWrr6dubYKKd4hJWRWDgosA8Wm6GUH7rYcX9C"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibDMS.sol": {
+        "keccak256": "0x9e21877024ffd55f516a2d8ad52a5f2dab3df7558c872352e23ad9b72729fcf8",
+        "urls": [
+          "bzz-raw://d4d255321249aae710372f33e6f20a182993b1be8c88dccf1b846cfa72516fee",
+          "dweb:/ipfs/QmYgZtUoksTZrd2W1uxQgxCBw1YgSHux7ZWiYbUZvcSq7H"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibDMSGuards.sol": {
+        "keccak256": "0xe91f90f44329aab91d115930409f9f5ae2653da192bc29e4ee5f0c9ec5bf62b7",
+        "urls": [
+          "bzz-raw://e2b443a6fb304d2e345f5ae958002c88ea6786fd6061f89256e204ce35e4b0d6",
+          "dweb:/ipfs/QmQ74oqMHXefJHm3zYiWb2DkVwowacnqVoc3Ti98bNmLLd"
+        ],
+        "license": "MIT"
+      },
+      "contracts/Vault/libraries/LibDiamond.sol": {
+        "keccak256": "0x2ab3387cb04071539c1c38068f277df334909a8f9199ba27e8053d8922402f32",
+        "urls": [
+          "bzz-raw://164e4dd5c00b31f0df64529bb69038b7ebafe309f86afed2302ddff65fe9dcda",
+          "dweb:/ipfs/QmSUB8w9cZ6osr9NAUEtT7hT2ukXHkQ9LgcnnGC52WW65i"
+        ],
+        "license": "MIT"
+      },
+      "contracts/Vault/libraries/LibErrors.sol": {
+        "keccak256": "0xce4b3cdf58fe745cc23fd3acbb93d388d25343450f15c8bb482b6ef5527339e9",
+        "urls": [
+          "bzz-raw://da53ef58e1a9f6ff1b32a82c76a5a34e76af6c2a3cb74e50018c539b411967f4",
+          "dweb:/ipfs/QmVYGVvW5oBvk6W3Xysr8MoupewJtP3EKwDWpWG9WNjw8v"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibGuards.sol": {
+        "keccak256": "0xf52aacbe49d7f2b29544b5dd8a35b655b59610328749090a48b431b62975febc",
+        "urls": [
+          "bzz-raw://a2263aea89b52e043b6420d912209c21c6cca5e30e743e529fe666e278faabcb",
+          "dweb:/ipfs/QmX4xifn2npbojrmQbbtWoqezzuS62nErpndovFEV6BHXe"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibLayoutSilo.sol": {
+        "keccak256": "0xad5bf2fd20542e2ec80963adefd3b3163012c65676c3f1c5ece04ba166216a32",
+        "urls": [
+          "bzz-raw://71d13de6e8c68c2ab89a8ea91a5a7c5c89d42db40453123307e3c13d6601ed3e",
+          "dweb:/ipfs/QmTaT8meM43jzLavynfaajrtZvG1fzZmuxvaTw6qHDWqkU"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibModuleManager.sol": {
+        "keccak256": "0x45ba44605d923a37a5b70b614172e201c0f9d28e58f4c557cdcc04bc0317f20e",
+        "urls": [
+          "bzz-raw://5684e4b22392e44c8731109c54fd860a78b089dfa9fd516402d162c322efaa6d",
+          "dweb:/ipfs/QmSumUwfERNwZht89MZCZzAdmhJjX2tu9y67iNw1XMZsPd"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibStorageBinder.sol": {
+        "keccak256": "0xa7a817c811e8d38ba1a54d5e5822c9259dd3df152b39fd749fd65dead54e110e",
+        "urls": [
+          "bzz-raw://188731abe47fe3aadb47974c02346465ed12e61147e97b86190caf903a8d53e3",
+          "dweb:/ipfs/QmScDn6v668MgC1XxvLYLfrZW6rt1rAdTWq2v1XPHqdKbq"
+        ],
+        "license": null
+      },
+      "contracts/Vault/libraries/LibTokens.sol": {
+        "keccak256": "0x780c7cf2463b846806b9d3fe0cf13ea0d6077858e054f31468b116dfa4b8c22a",
+        "urls": [
+          "bzz-raw://a8d48898890e1ac8ce19e62e3fdcb596a97599b4b4755da613664882fdd583e9",
+          "dweb:/ipfs/QmYrbvVAqWzxTubmznp2ahJ3Z2vWPr2FLptQzbkwHLvP8x"
+        ],
+        "license": null
+      },
+      "contracts/interfaces/IDiamondCut.sol": {
+        "keccak256": "0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf",
+        "urls": [
+          "bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765",
+          "dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IDiamondLoupe.sol": {
+        "keccak256": "0xac7e82142cf9e2eb13ba80ba52aa950e4b73aebaec78cbd747ec1b4598b01c08",
+        "urls": [
+          "bzz-raw://40d8edd4ef84f1cea2dbd614208f29982acd1731e93b045a3651e146fccb581e",
+          "dweb:/ipfs/QmPcJ67WHWkVTNGubhFyEvBFxWLBCP3QvzwSzZgvZAQYA2"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IERC1155.sol": {
+        "keccak256": "0xd98d62a7cfec5b7bb199e6b11dda1427f68d97c1e890226846e444c5fdd705ba",
+        "urls": [
+          "bzz-raw://eda955f978dc917e6d719bde0d70c4e63dd73c9dd88fcebbf65b4cb75611117e",
+          "dweb:/ipfs/Qmf9ohhubgRVGpudeE7XUxjBhG25MAnLmFa1qjxnHYpZQm"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IERC165.sol": {
+        "keccak256": "0x90ee0607a08a2d6e21132dc60810936cc5cd65b077d59f02dfb42c6b8be52b2c",
+        "urls": [
+          "bzz-raw://0038bb2c3e17abc99cbd60166a8aac884b313a6ad929ebcfb4f6770cd5f02ffe",
+          "dweb:/ipfs/QmZYsuSrQu5P4RX1yS6YT2r7VTaAPaWkQb58bpfAt4Ya9r"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IERC20.sol": {
+        "keccak256": "0xcfbfd19eb6ef183ce50be075607af71e64f9a5ca27c02a85cbfff879bfc737dc",
+        "urls": [
+          "bzz-raw://d48f27073c98b5642ed46b44a248ecb898129ee9643721603d73840a09ce1788",
+          "dweb:/ipfs/Qma8Nj2vE62mjXfqBdLHTNCSGDz4XYceVLoCxjSWrz6wfP"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IERC721.sol": {
+        "keccak256": "0x6eb3c263c07f182d27d3b60990e5411bb8367c8b72d951245191c8f26db91931",
+        "urls": [
+          "bzz-raw://6faa1b8e94fcb85bd342176447948a98b6dec378f893b6273e74e49d778440de",
+          "dweb:/ipfs/QmRvDKdZkPdLkrjh6qayWj9vPkbf4fo4nPKnQ7CYjoQRd3"
+        ],
+        "license": null
+      },
+      "contracts/interfaces/IModuleData.sol": {
+        "keccak256": "0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb",
+        "urls": [
+          "bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda",
+          "dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IVaultDiamond.sol": {
+        "keccak256": "0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6",
+        "urls": [
+          "bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7",
+          "dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/Vault/libraries/LibModuleManager.sol",
+    "id": 6316,
+    "exportedSymbols": {
+      "FacetAndSelectorData": [
+        6204
+      ],
+      "LibModuleManager": [
+        6315
+      ],
+      "LibStorageBinder": [
+        6426
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:445:18",
+    "nodes": [
+      {
+        "id": 6288,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 6290,
+        "nodeType": "ImportDirective",
+        "src": "25:68:18",
+        "nodes": [],
+        "absolutePath": "contracts/Vault/libraries/LibLayoutSilo.sol",
+        "file": "../libraries/LibLayoutSilo.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 6316,
+        "sourceUnit": 6287,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6289,
+              "name": "FacetAndSelectorData",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6204,
+              "src": "33:20:18",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 6292,
+        "nodeType": "ImportDirective",
+        "src": "94:67:18",
+        "nodes": [],
+        "absolutePath": "contracts/Vault/libraries/LibStorageBinder.sol",
+        "file": "../libraries/LibStorageBinder.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 6316,
+        "sourceUnit": 6427,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6291,
+              "name": "LibStorageBinder",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 6426,
+              "src": "102:16:18",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 6315,
+        "nodeType": "ContractDefinition",
+        "src": "163:281:18",
+        "nodes": [
+          {
+            "id": 6314,
+            "nodeType": "FunctionDefinition",
+            "src": "194:248:18",
+            "nodes": [],
+            "body": {
+              "id": 6313,
+              "nodeType": "Block",
+              "src": "291:151:18",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    6301
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 6301,
+                      "mutability": "mutable",
+                      "name": "fs",
+                      "nameLocation": "330:2:18",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 6313,
+                      "src": "301:31:18",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FacetAndSelectorData_$6204_storage_ptr",
+                        "typeString": "struct FacetAndSelectorData"
+                      },
+                      "typeName": {
+                        "id": 6300,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 6299,
+                          "name": "FacetAndSelectorData",
+                          "nameLocations": [
+                            "301:20:18"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 6204,
+                          "src": "301:20:18"
+                        },
+                        "referencedDeclaration": 6204,
+                        "src": "301:20:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FacetAndSelectorData_$6204_storage_ptr",
+                          "typeString": "struct FacetAndSelectorData"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 6305,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 6302,
+                        "name": "LibStorageBinder",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6426,
+                        "src": "335:16:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_LibStorageBinder_$6426_$",
+                          "typeString": "type(library LibStorageBinder)"
+                        }
+                      },
+                      "id": 6303,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "365:26:18",
+                      "memberName": "_bindAndReturnFacetStorage",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6398,
+                      "src": "335:56:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_FacetAndSelectorData_$6204_storage_ptr_$",
+                        "typeString": "function () pure returns (struct FacetAndSelectorData storage pointer)"
+                      }
+                    },
+                    "id": 6304,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "335:58:18",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FacetAndSelectorData_$6204_storage_ptr",
+                      "typeString": "struct FacetAndSelectorData storage pointer"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "301:92:18"
+                },
+                {
+                  "expression": {
+                    "id": 6311,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6306,
+                      "name": "active_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6297,
+                      "src": "403:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 6307,
+                          "name": "fs",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6301,
+                          "src": "413:2:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FacetAndSelectorData_$6204_storage_ptr",
+                            "typeString": "struct FacetAndSelectorData storage pointer"
+                          }
+                        },
+                        "id": 6308,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "416:12:18",
+                        "memberName": "activeModule",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 6196,
+                        "src": "413:15:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                          "typeString": "mapping(string memory => bool)"
+                        }
+                      },
+                      "id": 6310,
+                      "indexExpression": {
+                        "id": 6309,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6294,
+                        "src": "429:5:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "413:22:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "403:32:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6312,
+                  "nodeType": "ExpressionStatement",
+                  "src": "403:32:18"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_isActiveModule",
+            "nameLocation": "203:15:18",
+            "parameters": {
+              "id": 6295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6294,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "242:5:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6314,
+                  "src": "228:19:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6293,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "218:35:18"
+            },
+            "returnParameters": {
+              "id": 6298,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6297,
+                  "mutability": "mutable",
+                  "name": "active_",
+                  "nameLocation": "282:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6314,
+                  "src": "277:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6296,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "277:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "276:14:18"
+            },
+            "scope": 6315,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LibModuleManager",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          6315
+        ],
+        "name": "LibModuleManager",
+        "nameLocation": "171:16:18",
+        "scope": 6316,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 18
+}

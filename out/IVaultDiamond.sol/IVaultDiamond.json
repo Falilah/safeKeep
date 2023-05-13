@@ -1,0 +1,318 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "vaultFactoryDiamond",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "vaultFactoryDiamond()": "66bd442d",
+    "vaultOwner()": "1f52692b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"vaultFactoryDiamond\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IVaultDiamond.sol\":\"IVaultDiamond\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765\",\"dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771\"]},\"contracts/interfaces/IModuleData.sol\":{\"keccak256\":\"0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda\",\"dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ\"]},\"contracts/interfaces/IVaultDiamond.sol\":{\"keccak256\":\"0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6\",\"urls\":[\"bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7\",\"dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultFactoryDiamond",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultOwner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/solmate/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":solmate.git/=lib/solmate/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IVaultDiamond.sol": "IVaultDiamond"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IDiamondCut.sol": {
+        "keccak256": "0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf",
+        "urls": [
+          "bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765",
+          "dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IModuleData.sol": {
+        "keccak256": "0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb",
+        "urls": [
+          "bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda",
+          "dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IVaultDiamond.sol": {
+        "keccak256": "0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6",
+        "urls": [
+          "bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7",
+          "dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IVaultDiamond.sol",
+    "id": 9057,
+    "exportedSymbols": {
+      "IDiamondCut": [
+        8663
+      ],
+      "IModuleData": [
+        9042
+      ],
+      "IVaultDiamond": [
+        9056
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:255:33",
+    "nodes": [
+      {
+        "id": 9044,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:33",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 9045,
+        "nodeType": "ImportDirective",
+        "src": "24:39:33",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IModuleData.sol",
+        "file": "../interfaces/IModuleData.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 9057,
+        "sourceUnit": 9043,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 9056,
+        "nodeType": "ContractDefinition",
+        "src": "65:189:33",
+        "nodes": [
+          {
+            "id": 9050,
+            "nodeType": "FunctionDefinition",
+            "src": "95:63:33",
+            "nodes": [],
+            "functionSelector": "66bd442d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultFactoryDiamond",
+            "nameLocation": "104:19:33",
+            "parameters": {
+              "id": 9046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:2:33"
+            },
+            "returnParameters": {
+              "id": 9049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9048,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9050,
+                  "src": "149:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9047,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:9:33"
+            },
+            "scope": 9056,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9055,
+            "nodeType": "FunctionDefinition",
+            "src": "198:54:33",
+            "nodes": [],
+            "functionSelector": "1f52692b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultOwner",
+            "nameLocation": "207:10:33",
+            "parameters": {
+              "id": 9051,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "217:2:33"
+            },
+            "returnParameters": {
+              "id": 9054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9053,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9055,
+                  "src": "243:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9052,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "242:9:33"
+            },
+            "scope": 9056,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVaultDiamond",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9056
+        ],
+        "name": "IVaultDiamond",
+        "nameLocation": "75:13:33",
+        "scope": 9057,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 33
+}
