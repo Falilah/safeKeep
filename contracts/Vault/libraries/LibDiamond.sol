@@ -7,9 +7,8 @@ pragma solidity 0.8.18;
 /******************************************************************************/
 import {IDiamondCut} from "../../interfaces/IDiamondCut.sol";
 
-import {FacetAndSelectorData} from "../libraries/LibLayoutSilo.sol";
+import "../libraries/LibLayoutSilo.sol";
 import "../libraries/LibStorageBinder.sol";
-import "../../interfaces/IVaultDiamond.sol";
 
 library LibDiamond {
     error InValidFacetCutAction();
@@ -25,39 +24,41 @@ library LibDiamond {
     error NonEmptyCalldata();
     error EmptyCalldata();
     error InitCallFailed();
+    // bytes32 constant VAULT_STORAGE_POSITION =
+    //     keccak256("diamond.standard.keep.storage");
+
+    // function vaultStorage() internal pure returns (VaultStorage storage vaultData) {
+    //     bytes32 position = VAULT_STORAGE_POSITION;
+    //     assembly {
+    //         vaultData.slot := position
+    //     }
+    // }
 
     event OwnershipTransferred(
         address indexed previousOwner,
         address indexed newOwner
     );
+    event SlotWrittenTo(bytes32 indexed slott);
 
     function setVaultOwner(address _newOwner) internal {
-        FacetAndSelectorData storage fsData = LibStorageBinder
-            ._bindAndReturnFacetStorage();
-        address previousOwner = fsData.vaultOwner;
-        fsData.vaultOwner = _newOwner;
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        address previousOwner = vaultData.vaultOwner;
+        vaultData.vaultOwner = _newOwner;
         emit OwnershipTransferred(previousOwner, _newOwner);
     }
 
     function vaultOwner() internal view returns (address contractOwner_) {
         contractOwner_ = LibStorageBinder
-            ._bindAndReturnFacetStorage()
+            ._bindAndReturnVaultStorage()
             .vaultOwner;
-    }
-
-    function vaultID() internal view returns (uint256 vaultID_) {
-        vaultID_ = LibStorageBinder._bindAndReturnFacetStorage().vaultID;
     }
 
     function enforceIsContractOwner() internal view {
         if (
             msg.sender !=
-            LibStorageBinder._bindAndReturnFacetStorage().vaultOwner
+            LibStorageBinder._bindAndReturnVaultStorage().vaultOwner
         ) revert NotVaultOwner();
-    }
-
-    function vaultFactory() internal view returns (address) {
-        return IVaultDiamond(address(this)).vaultFactoryDiamond();
     }
 
     event DiamondCut(
@@ -132,6 +133,11 @@ library LibDiamond {
             addFunction(fsData, selector, selectorPosition, _facetAddress);
             selectorPosition++;
         }
+        bytes32 _slott;
+        assembly {
+            _slott := fsData.slot
+        }
+        emit SlotWrittenTo(_slott);
     }
 
     function replaceFunctions(
@@ -167,6 +173,12 @@ library LibDiamond {
             addFunction(fsData, selector, selectorPosition, _facetAddress);
             selectorPosition++;
         }
+        bytes32 _slott;
+        assembly {
+            _slott := fsData.slot
+        }
+
+        emit SlotWrittenTo(_slott);
     }
 
     function removeFunctions(
@@ -189,6 +201,11 @@ library LibDiamond {
                 .facetAddress;
             removeFunction(fsData, oldFacetAddress, selector);
         }
+        bytes32 _slott;
+        assembly {
+            _slott := fsData.slot
+        }
+        emit SlotWrittenTo(_slott);
     }
 
     function addFacet(

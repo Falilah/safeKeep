@@ -1,12 +1,30 @@
 {
   "abi": [
     {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_diamondCutFacet",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_backupAddress",
+          "type": "address"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [],
-      "name": "vaultFactoryDiamond",
+      "name": "tempOwner",
       "outputs": [
         {
           "internalType": "address",
-          "name": "",
+          "name": "owner_",
           "type": "address"
         }
       ],
@@ -38,10 +56,11 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {
-    "vaultFactoryDiamond()": "66bd442d",
+    "init(address,address)": "f09a4016",
+    "tempOwner()": "a2a12bfb",
     "vaultOwner()": "1f52692b"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"vaultFactoryDiamond\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IVaultDiamond.sol\":\"IVaultDiamond\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765\",\"dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771\"]},\"contracts/interfaces/IModuleData.sol\":{\"keccak256\":\"0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda\",\"dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ\"]},\"contracts/interfaces/IVaultDiamond.sol\":{\"keccak256\":\"0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6\",\"urls\":[\"bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7\",\"dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_diamondCutFacet\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_backupAddress\",\"type\":\"address\"}],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tempOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner_\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IVaultDiamond.sol\":\"IVaultDiamond\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IVaultDiamond.sol\":{\"keccak256\":\"0xd664e704ba58296a844c781c15cb987be675508dd6b264d2d37d77c3f23d74f9\",\"urls\":[\"bzz-raw://b8697a5b98f2a7d98c4c55126bcbde8e00e9e6b080460deb1991dfc6b95c0ef4\",\"dweb:/ipfs/Qmd1d21kSC86onvDsHc7j7r7LDAfJsksUgXNCN2Q3PMVix\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.18+commit.87f61d96"
@@ -50,14 +69,31 @@
     "output": {
       "abi": [
         {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_diamondCutFacet",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_backupAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "init"
+        },
+        {
           "inputs": [],
           "stateMutability": "view",
           "type": "function",
-          "name": "vaultFactoryDiamond",
+          "name": "tempOwner",
           "outputs": [
             {
               "internalType": "address",
-              "name": "",
+              "name": "owner_",
               "type": "address"
             }
           ]
@@ -110,27 +146,11 @@
       "libraries": {}
     },
     "sources": {
-      "contracts/interfaces/IDiamondCut.sol": {
-        "keccak256": "0x508f2149e7f4d3370c6895d2c22de478a1cd910a2c1a25511124cee1d83fbcbf",
-        "urls": [
-          "bzz-raw://09dc710bcff2690c53aae1459aac8cdfad95db45b3bf748f837cb856c5872765",
-          "dweb:/ipfs/QmZNfaa9sMNC4iM1gqhJWZzKiE8nQ3wuE6NJMAxZWYK771"
-        ],
-        "license": "MIT"
-      },
-      "contracts/interfaces/IModuleData.sol": {
-        "keccak256": "0xec628a7c4a83b6f40ec387f46363c951a85eb35ba35585e5beb237543d2c1bcb",
-        "urls": [
-          "bzz-raw://5799c5f69ed69cb660603a2967eabab1df2fd338b8183f1a634a0edbc92ffeda",
-          "dweb:/ipfs/QmYi2N9LAJTtbR2pC5xu9LYjBWcpLCS32dHTKek5wpKUGQ"
-        ],
-        "license": "MIT"
-      },
       "contracts/interfaces/IVaultDiamond.sol": {
-        "keccak256": "0x96c5822a12384688c23f3287f99691afa3b8247e6d44a384cb636d70b928d9f6",
+        "keccak256": "0xd664e704ba58296a844c781c15cb987be675508dd6b264d2d37d77c3f23d74f9",
         "urls": [
-          "bzz-raw://32335b88fa1bd7f612217ce752ff8c4dc63734a27cfd8d6d5f9c0de5f44306d7",
-          "dweb:/ipfs/QmdgpPL3Z8VMJtMBk129PgLfyDoeC6cmUo3V7PiNQbJMjj"
+          "bzz-raw://b8697a5b98f2a7d98c4c55126bcbde8e00e9e6b080460deb1991dfc6b95c0ef4",
+          "dweb:/ipfs/Qmd1d21kSC86onvDsHc7j7r7LDAfJsksUgXNCN2Q3PMVix"
         ],
         "license": null
       }
@@ -139,25 +159,19 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/IVaultDiamond.sol",
-    "id": 9057,
+    "id": 7660,
     "exportedSymbols": {
-      "IDiamondCut": [
-        8663
-      ],
-      "IModuleData": [
-        9042
-      ],
       "IVaultDiamond": [
-        9056
+        7659
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "0:255:33",
+    "src": "0:291:20",
     "nodes": [
       {
-        "id": 9044,
+        "id": 7641,
         "nodeType": "PragmaDirective",
-        "src": "0:23:33",
+        "src": "0:23:20",
         "nodes": [],
         "literals": [
           "solidity",
@@ -166,53 +180,34 @@
         ]
       },
       {
-        "id": 9045,
-        "nodeType": "ImportDirective",
-        "src": "24:39:33",
-        "nodes": [],
-        "absolutePath": "contracts/interfaces/IModuleData.sol",
-        "file": "../interfaces/IModuleData.sol",
-        "nameLocation": "-1:-1:-1",
-        "scope": 9057,
-        "sourceUnit": 9043,
-        "symbolAliases": [],
-        "unitAlias": ""
-      },
-      {
-        "id": 9056,
+        "id": 7659,
         "nodeType": "ContractDefinition",
-        "src": "65:189:33",
+        "src": "25:265:20",
         "nodes": [
           {
-            "id": 9050,
+            "id": 7648,
             "nodeType": "FunctionDefinition",
-            "src": "95:63:33",
+            "src": "55:73:20",
             "nodes": [],
-            "functionSelector": "66bd442d",
+            "functionSelector": "f09a4016",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "vaultFactoryDiamond",
-            "nameLocation": "104:19:33",
+            "name": "init",
+            "nameLocation": "64:4:20",
             "parameters": {
-              "id": 9046,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "123:2:33"
-            },
-            "returnParameters": {
-              "id": 9049,
+              "id": 7646,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9048,
+                  "id": 7643,
                   "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
+                  "name": "_diamondCutFacet",
+                  "nameLocation": "77:16:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9050,
-                  "src": "149:7:33",
+                  "scope": 7648,
+                  "src": "69:24:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -220,10 +215,38 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9047,
+                    "id": 7642,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "149:7:33",
+                    "src": "69:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7645,
+                  "mutability": "mutable",
+                  "name": "_backupAddress",
+                  "nameLocation": "103:14:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7648,
+                  "src": "95:22:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7644,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:7:20",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -233,43 +256,49 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "148:9:33"
+              "src": "68:50:20"
             },
-            "scope": 9056,
-            "stateMutability": "view",
+            "returnParameters": {
+              "id": 7647,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "127:0:20"
+            },
+            "scope": 7659,
+            "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 9055,
+            "id": 7653,
             "nodeType": "FunctionDefinition",
-            "src": "198:54:33",
+            "src": "168:54:20",
             "nodes": [],
             "functionSelector": "1f52692b",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "vaultOwner",
-            "nameLocation": "207:10:33",
+            "nameLocation": "177:10:20",
             "parameters": {
-              "id": 9051,
+              "id": 7649,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "217:2:33"
+              "src": "187:2:20"
             },
             "returnParameters": {
-              "id": 9054,
+              "id": 7652,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9053,
+                  "id": 7651,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9055,
-                  "src": "243:7:33",
+                  "scope": 7653,
+                  "src": "213:7:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -277,10 +306,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9052,
+                    "id": 7650,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "243:7:33",
+                    "src": "213:7:20",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -290,9 +319,66 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "242:9:33"
+              "src": "212:9:20"
             },
-            "scope": 9056,
+            "scope": 7659,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 7658,
+            "nodeType": "FunctionDefinition",
+            "src": "228:60:20",
+            "nodes": [],
+            "functionSelector": "a2a12bfb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tempOwner",
+            "nameLocation": "237:9:20",
+            "parameters": {
+              "id": 7654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "246:2:20"
+            },
+            "returnParameters": {
+              "id": 7657,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7656,
+                  "mutability": "mutable",
+                  "name": "owner_",
+                  "nameLocation": "280:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7658,
+                  "src": "272:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7655,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "272:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "271:16:20"
+            },
+            "scope": 7659,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -305,14 +391,14 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          9056
+          7659
         ],
         "name": "IVaultDiamond",
-        "nameLocation": "75:13:33",
-        "scope": 9057,
+        "nameLocation": "35:13:20",
+        "scope": 7660,
         "usedErrors": []
       }
     ]
   },
-  "id": 33
+  "id": 20
 }

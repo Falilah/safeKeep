@@ -1,54 +1,63 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 
-/**
- * Implementation of a diamond.
- * /*****************************************************************************
- */
+/******************************************************************************\
+* Author: Nick Mudge <nick@perfectabstractions.com> (https://twitter.com/mudgen)
+* EIP-2535 Diamonds: https://eips.ethereum.org/EIPS/eip-2535
+*
+* Implementation of a diamond.
+/******************************************************************************/
 
 import {LibDiamond} from "./libraries/LibDiamond.sol";
 import {IDiamondCut} from "../interfaces/IDiamondCut.sol";
 
-import {FacetAndSelectorData, DMSData} from "./libraries/LibLayoutSilo.sol";
-
-import {LibStorageBinder} from "./libraries/LibStorageBinder.sol";
-import {LibErrors} from "./libraries/LibErrors.sol";
-
+import "./libraries/LibLayoutSilo.sol";
+import "./libraries/LibStorageBinder.sol";
 //import "./libraries/LibVaultStorage.sol";
 
 import "../interfaces/IVaultDiamond.sol";
 
 contract VaultDiamond {
-    address public vaultFactoryDiamond;
+    bool _init;
+    event SlotWrittenTo(bytes32 slot);
 
-    constructor(
-        IDiamondCut.FacetCut[] memory _selectorModule,
-        IDiamondCut.FacetCut[] memory _tokenModule,
-        address _vaultOwner,
-        address _backupAddress,
-        uint256 _pingWindow,
-        uint256 _vaultID
-    ) payable {
-        LibDiamond.diamondCut(_selectorModule, address(0), "");
-        LibDiamond.diamondCut(_tokenModule, address(0), "");
-        if (_backupAddress == address(0)) revert LibErrors.NoZeroAddress();
-        //set module installation record to true
-        FacetAndSelectorData storage fsData = LibStorageBinder
-            ._bindAndReturnFacetStorage();
-        fsData.activeModule["Selector"] = true;
-        fsData.activeModule["Token"] = true;
-        fsData.activeModules.push("Selector");
-        fsData.activeModules.push("Token");
-        fsData.backupAddress = _backupAddress;
-        fsData.pingWindow = _pingWindow;
-        fsData.vaultID = _vaultID;
-        LibDiamond.setVaultOwner(_vaultOwner);
-        vaultFactoryDiamond = msg.sender;
+    constructor() payable {
+        address _contractOwner = tx.origin;
+        LibDiamond.setVaultOwner(_contractOwner);
+    }
+
+    function init(address _diamondCutFacet, address _backup) public {
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        assert(!_init);
+        assert(
+            msg.sender == LibDiamond.vaultOwner() ||
+                tx.origin == LibDiamond.vaultOwner()
+        );
+        // Add the diamondCut external function from the diamondCutFacet
+        IDiamondCut.FacetCut[] memory cut = new IDiamondCut.FacetCut[](1);
+        bytes4[] memory functionSelectors = new bytes4[](2);
+        functionSelectors[0] = IDiamondCut.diamondCut.selector;
+        functionSelectors[1] = IVaultDiamond.tempOwner.selector;
+        cut[0] = IDiamondCut.FacetCut({
+            facetAddress: _diamondCutFacet,
+            action: IDiamondCut.FacetCutAction.Add,
+            functionSelectors: functionSelectors
+        });
+
+        LibDiamond.diamondCut(cut, address(0), "");
+        vaultData.backupAddress = _backup;
+        _init = true;
+        bytes32 _slott;
+        assembly {
+            _slott := vaultData.slot
+        }
+
+        emit SlotWrittenTo(_slott);
     }
 
     // Find facet for function that is called and execute the
     // function if a facet is found and return any value.
-
     fallback() external payable {
         FacetAndSelectorData storage fsData = LibStorageBinder
             ._bindAndReturnFacetStorage();
@@ -73,6 +82,13 @@ contract VaultDiamond {
                 return(0, returndatasize())
             }
         }
+
+        bytes32 _slott;
+        assembly {
+            _slott := fsData.slot
+        }
+
+        emit SlotWrittenTo(_slott);
     }
 
     receive() external payable {}

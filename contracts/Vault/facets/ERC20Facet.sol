@@ -1,16 +1,63 @@
 pragma solidity 0.8.18;
 
-import {LibTokens} from "../libraries/LibTokens.sol";
+import "../libraries/LibKeep.sol";
+
+import "../libraries/LibTokens.sol";
 
 import "../libraries/LibLayoutSilo.sol";
 import "../libraries/LibStorageBinder.sol";
 
-import {LibGuards} from "../libraries/LibGuards.sol";
-
 contract ERC20Facet {
+    struct AllocatedERC20Tokens {
+        address token;
+        uint256 amount;
+    }
+
+    function getAllocatedERC20Tokens(
+        address _inheritor
+    ) public view returns (AllocatedERC20Tokens[] memory tAllocs) {
+        Guards._activeInheritor(_inheritor);
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        uint256 count = vaultData
+            .inheritorAllocatedERC20Tokens[_inheritor]
+            .length;
+        if (count > 0) {
+            tAllocs = new AllocatedERC20Tokens[](count);
+            for (uint256 i; i < count; i++) {
+                address _t = vaultData.inheritorAllocatedERC20Tokens[
+                    _inheritor
+                ][i];
+                tAllocs[i].amount = vaultData.inheritorTokenShares[_inheritor][
+                    _t
+                ];
+                tAllocs[i].token = _t;
+            }
+        }
+    }
+
+    function inheritorERC20TokenAllocation(
+        address _inheritor,
+        address _token
+    ) public view returns (uint256) {
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        return vaultData.inheritorTokenShares[_inheritor][_token];
+    }
+
+    function getUnallocatedTokens(
+        address _token
+    ) public view returns (uint256 unallocated_) {
+        uint256 bal = IERC20(_token).balanceOf(address(this));
+        uint256 allocated = LibKeep.getCurrentAllocatedTokens(_token);
+        if (bal > allocated) {
+            unallocated_ = bal - allocated;
+        }
+    }
+
     //DEPOSITS
     function depositERC20Token(address _token, uint256 _amount) external {
-        //  LibGuards._onlyVaultOwner();
+        //  Guards._onlyVaultOwner();
         LibTokens._inputERC20Token(_token, _amount);
     }
 
@@ -18,7 +65,7 @@ contract ERC20Facet {
         address[] calldata _tokens,
         uint256[] calldata _amounts
     ) external {
-        //LibGuards._onlyVaultOwner();
+        //Guards._onlyVaultOwner();
         LibTokens._inputERC20Tokens(_tokens, _amounts);
     }
 
@@ -29,8 +76,8 @@ contract ERC20Facet {
         uint256 _amount,
         address _to
     ) public {
-        LibGuards._onlyVaultOwner();
-        LibTokens._withdrawERC20Token(_token, _amount, _to);
+        Guards._onlyVaultOwner();
+        LibKeep._withdrawERC20Token(_token, _amount, _to);
     }
 
     function batchWithdrawERC20Token(
@@ -38,8 +85,8 @@ contract ERC20Facet {
         uint256[] calldata _amounts,
         address _to
     ) public {
-        LibGuards._onlyVaultOwner();
-        LibTokens._withdrawERC20Tokens(_tokens, _amounts, _to);
+        Guards._onlyVaultOwner();
+        LibKeep._withdrawERC20Tokens(_tokens, _amounts, _to);
     }
 
     //APPROVALS
@@ -48,7 +95,7 @@ contract ERC20Facet {
         address _to,
         uint256 _amount
     ) external {
-        LibGuards._onlyVaultOwner();
+        Guards._onlyVaultOwner();
         LibTokens._approveERC20Token(_token, _to, _amount);
     }
 }

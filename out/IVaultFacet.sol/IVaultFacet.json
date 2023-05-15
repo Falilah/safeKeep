@@ -1,0 +1,1031 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_vaultID",
+          "type": "uint256"
+        }
+      ],
+      "name": "EthDeposited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "backup",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "startingBalance",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "inheritors",
+          "type": "address[]"
+        }
+      ],
+      "name": "vaultCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_newInheritors",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_weiShare",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "addInheritors",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "allEtherAllocations",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "inheritor",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "weiAlloc",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IVaultFacet.AllInheritorEtherAllocs[]",
+          "name": "eAllocs",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newBackupAddress",
+          "type": "address"
+        }
+      ],
+      "name": "transferBackup",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addInheritors(address[],uint256[])": "fa27625e",
+    "allEtherAllocations()": "5c69964d",
+    "transferBackup(address)": "a2bbbc70"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_vaultID\",\"type\":\"uint256\"}],\"name\":\"EthDeposited\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"backup\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"startingBalance\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"inheritors\",\"type\":\"address[]\"}],\"name\":\"vaultCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_newInheritors\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_weiShare\",\"type\":\"uint256[]\"}],\"name\":\"addInheritors\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"allEtherAllocations\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"inheritor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"weiAlloc\",\"type\":\"uint256\"}],\"internalType\":\"struct IVaultFacet.AllInheritorEtherAllocs[]\",\"name\":\"eAllocs\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newBackupAddress\",\"type\":\"address\"}],\"name\":\"transferBackup\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IVaultFacet.sol\":\"IVaultFacet\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IVaultFacet.sol\":{\"keccak256\":\"0x567670bb2fbe21813428b96397244aa411bf55d41bc6648e1805d684d3113a8c\",\"urls\":[\"bzz-raw://993011ea1d5f0cbe0f4052ced790842cc78099f47e04340e1a11e9a45592e83b\",\"dweb:/ipfs/QmUA9RKpVcFgUv96mZDQEnZVywDPWnvo77JRMXMSiXAzQZ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_vaultID",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "EthDeposited",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "backup",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "startingBalance",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address[]",
+              "name": "inheritors",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "vaultCreated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "_newInheritors",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "_weiShare",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addInheritors"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allEtherAllocations",
+          "outputs": [
+            {
+              "internalType": "struct IVaultFacet.AllInheritorEtherAllocs[]",
+              "name": "eAllocs",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "inheritor",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "weiAlloc",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_newBackupAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferBackup"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/solmate/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":solmate.git/=lib/solmate/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IVaultFacet.sol": "IVaultFacet"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IVaultFacet.sol": {
+        "keccak256": "0x567670bb2fbe21813428b96397244aa411bf55d41bc6648e1805d684d3113a8c",
+        "urls": [
+          "bzz-raw://993011ea1d5f0cbe0f4052ced790842cc78099f47e04340e1a11e9a45592e83b",
+          "dweb:/ipfs/QmUA9RKpVcFgUv96mZDQEnZVywDPWnvo77JRMXMSiXAzQZ"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IVaultFacet.sol",
+    "id": 7720,
+    "exportedSymbols": {
+      "IVaultFacet": [
+        7719
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:870:21",
+    "nodes": [
+      {
+        "id": 7661,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:21",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 7719,
+        "nodeType": "ContractDefinition",
+        "src": "25:844:21",
+        "nodes": [
+          {
+            "id": 7666,
+            "nodeType": "StructDefinition",
+            "src": "53:91:21",
+            "nodes": [],
+            "canonicalName": "IVaultFacet.AllInheritorEtherAllocs",
+            "members": [
+              {
+                "constant": false,
+                "id": 7663,
+                "mutability": "mutable",
+                "name": "inheritor",
+                "nameLocation": "102:9:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7666,
+                "src": "94:17:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 7662,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "94:7:21",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7665,
+                "mutability": "mutable",
+                "name": "weiAlloc",
+                "nameLocation": "129:8:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7666,
+                "src": "121:16:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7664,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "121:7:21",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "AllInheritorEtherAllocs",
+            "nameLocation": "60:23:21",
+            "scope": 7719,
+            "visibility": "public"
+          },
+          {
+            "id": 7680,
+            "nodeType": "StructDefinition",
+            "src": "150:175:21",
+            "nodes": [],
+            "canonicalName": "IVaultFacet.VaultInfo",
+            "members": [
+              {
+                "constant": false,
+                "id": 7668,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "185:5:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "177:13:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 7667,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "177:7:21",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7670,
+                "mutability": "mutable",
+                "name": "weiBalance",
+                "nameLocation": "208:10:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "200:18:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7669,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:7:21",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7672,
+                "mutability": "mutable",
+                "name": "lastPing",
+                "nameLocation": "236:8:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "228:16:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7671,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "228:7:21",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7674,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "262:2:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "254:10:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7673,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:21",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7676,
+                "mutability": "mutable",
+                "name": "backup",
+                "nameLocation": "282:6:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "274:14:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 7675,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "274:7:21",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7679,
+                "mutability": "mutable",
+                "name": "inheritors",
+                "nameLocation": "308:10:21",
+                "nodeType": "VariableDeclaration",
+                "scope": 7680,
+                "src": "298:20:21",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 7677,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "298:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 7678,
+                  "nodeType": "ArrayTypeName",
+                  "src": "298:9:21",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "VaultInfo",
+            "nameLocation": "157:9:21",
+            "scope": 7719,
+            "visibility": "public"
+          },
+          {
+            "id": 7691,
+            "nodeType": "EventDefinition",
+            "src": "331:159:21",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "63763c2f8c79770d321db2b7e669e6b40f74b2a4ac62efa410e8769888178b73",
+            "name": "vaultCreated",
+            "nameLocation": "337:12:21",
+            "parameters": {
+              "id": 7690,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7682,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "375:5:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7691,
+                  "src": "359:21:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7681,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "359:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7684,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "backup",
+                  "nameLocation": "406:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7691,
+                  "src": "390:22:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7683,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "390:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7686,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "startingBalance",
+                  "nameLocation": "438:15:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7691,
+                  "src": "422:31:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7685,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7689,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "inheritors",
+                  "nameLocation": "473:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7691,
+                  "src": "463:20:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7687,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "463:7:21",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 7688,
+                    "nodeType": "ArrayTypeName",
+                    "src": "463:9:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "349:140:21"
+            }
+          },
+          {
+            "id": 7697,
+            "nodeType": "EventDefinition",
+            "src": "496:54:21",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "07ee1b03727e44235515cdf79d9d816d5494256e42c1c4a4716504b52296112b",
+            "name": "EthDeposited",
+            "nameLocation": "502:12:21",
+            "parameters": {
+              "id": 7696,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7693,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "523:7:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7697,
+                  "src": "515:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7692,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "515:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7695,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_vaultID",
+                  "nameLocation": "540:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7697,
+                  "src": "532:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7694,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "532:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "514:35:21"
+            }
+          },
+          {
+            "id": 7706,
+            "nodeType": "FunctionDefinition",
+            "src": "556:119:21",
+            "nodes": [],
+            "functionSelector": "fa27625e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addInheritors",
+            "nameLocation": "565:13:21",
+            "parameters": {
+              "id": 7704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7700,
+                  "mutability": "mutable",
+                  "name": "_newInheritors",
+                  "nameLocation": "607:14:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7706,
+                  "src": "588:33:21",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7698,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "588:7:21",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 7699,
+                    "nodeType": "ArrayTypeName",
+                    "src": "588:9:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7703,
+                  "mutability": "mutable",
+                  "name": "_weiShare",
+                  "nameLocation": "650:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7706,
+                  "src": "631:28:21",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7701,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "631:7:21",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7702,
+                    "nodeType": "ArrayTypeName",
+                    "src": "631:9:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "578:87:21"
+            },
+            "returnParameters": {
+              "id": 7705,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "674:0:21"
+            },
+            "scope": 7719,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 7711,
+            "nodeType": "FunctionDefinition",
+            "src": "681:60:21",
+            "nodes": [],
+            "functionSelector": "a2bbbc70",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferBackup",
+            "nameLocation": "690:14:21",
+            "parameters": {
+              "id": 7709,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7708,
+                  "mutability": "mutable",
+                  "name": "_newBackupAddress",
+                  "nameLocation": "713:17:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7711,
+                  "src": "705:25:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7707,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "705:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "704:27:21"
+            },
+            "returnParameters": {
+              "id": 7710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "740:0:21"
+            },
+            "scope": 7719,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 7718,
+            "nodeType": "FunctionDefinition",
+            "src": "747:120:21",
+            "nodes": [],
+            "functionSelector": "5c69964d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allEtherAllocations",
+            "nameLocation": "756:19:21",
+            "parameters": {
+              "id": 7712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "775:2:21"
+            },
+            "returnParameters": {
+              "id": 7717,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7716,
+                  "mutability": "mutable",
+                  "name": "eAllocs",
+                  "nameLocation": "858:7:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7718,
+                  "src": "825:40:21",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_AllInheritorEtherAllocs_$7666_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IVaultFacet.AllInheritorEtherAllocs[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7714,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7713,
+                        "name": "AllInheritorEtherAllocs",
+                        "nameLocations": [
+                          "825:23:21"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 7666,
+                        "src": "825:23:21"
+                      },
+                      "referencedDeclaration": 7666,
+                      "src": "825:23:21",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AllInheritorEtherAllocs_$7666_storage_ptr",
+                        "typeString": "struct IVaultFacet.AllInheritorEtherAllocs"
+                      }
+                    },
+                    "id": 7715,
+                    "nodeType": "ArrayTypeName",
+                    "src": "825:25:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_AllInheritorEtherAllocs_$7666_storage_$dyn_storage_ptr",
+                      "typeString": "struct IVaultFacet.AllInheritorEtherAllocs[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "824:42:21"
+            },
+            "scope": 7719,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVaultFacet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          7719
+        ],
+        "name": "IVaultFacet",
+        "nameLocation": "35:11:21",
+        "scope": 7720,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 21
+}

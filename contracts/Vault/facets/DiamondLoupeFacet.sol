@@ -78,8 +78,8 @@ contract DiamondLoupeFacet is IDiamondLoupe, IERC165 {
     function supportsInterface(
         bytes4 _interfaceId
     ) external view override returns (bool) {
-        FacetAndSelectorData storage fsData = LibStorageBinder
-            ._bindAndReturnFacetStorage();
-        return fsData.supportedInterfaces[_interfaceId];
+        InterFaceData storage iFaceData = LibStorageBinder
+            ._bindAndReturnInterfaceStorage();
+        return iFaceData.supportedInterfaces[_interfaceId];
     }
 }

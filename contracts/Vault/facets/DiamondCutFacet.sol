@@ -8,15 +8,14 @@ pragma solidity 0.8.18;
 
 import {IDiamondCut} from "../../interfaces/IDiamondCut.sol";
 
-import {LibErrors} from "../libraries/LibErrors.sol";
+import {NoPermissions} from "../libraries/LibVaultStorage.sol";
 import {LibDiamond} from "../libraries/LibDiamond.sol";
-import {LibGuards} from "../libraries/LibGuards.sol";
 import "../libraries/LibLayoutSilo.sol";
 import "../libraries/LibStorageBinder.sol";
 
-import {IVaultDiamond} from "../../interfaces/IVaultDiamond.sol";
-
 contract DiamondCutFacet is IDiamondCut {
+    event SlotWrittenTo(bytes32 indexed slott);
+
     /// @notice Add/replace/remove any number of functions and optionally execute
     ///         a function with delegatecall
     /// @param _diamondCut Contains the facet addresses and function selectors
@@ -28,7 +27,22 @@ contract DiamondCutFacet is IDiamondCut {
         address _init,
         bytes calldata _calldata
     ) external override {
-        LibGuards._onlyVaultOwner();
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        if (tx.origin != vaultData.vaultOwner) revert NoPermissions();
         LibDiamond.diamondCut(_diamondCut, _init, _calldata);
+        bytes32 _slott;
+        assembly {
+            _slott := vaultData.slot
+        }
+
+        emit SlotWrittenTo(_slott);
+    }
+
+    //temp call made from factory to confirm ownership
+    function tempOwner() public view returns (address owner_) {
+        VaultData storage vaultData = LibStorageBinder
+            ._bindAndReturnVaultStorage();
+        owner_ = vaultData.vaultOwner;
     }
 }
