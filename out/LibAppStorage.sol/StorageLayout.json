@@ -1,0 +1,701 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/VaultFactory/libraries/LibAppStorage.sol\":\"StorageLayout\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/solmate/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate.git/=lib/solmate/src/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/Vault/libraries/LibKeepHelpers.sol\":{\"keccak256\":\"0x5fe31c710dbfb3de2c2e4bb1ce6f100e0e6c74d7902227b0aec76497898ff24e\",\"urls\":[\"bzz-raw://4fe30d032683a6b38b7acabe84131e38015487507b326f245a4207eb26d64a50\",\"dweb:/ipfs/QmS8mm7YDYb8RMdrFDUpVFYvd3DmitdEubMSksoL5GmXEx\"]},\"contracts/VaultFactory/libraries/LibAppStorage.sol\":{\"keccak256\":\"0xc6c6a873b9e4809b0b0ef9a451b0e21468ff133059c2d765ba6cf6404076883b\",\"urls\":[\"bzz-raw://add6ea87b9fad19a5722a9838ba2f8550f5f82455a4439fd0375d7b4252b0f21\",\"dweb:/ipfs/QmYKvPPWFnNyLXNt8MTKr23jkCRABaJvkQm2qLWBG3q8iU\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/solmate/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/",
+        ":solmate.git/=lib/solmate/src/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/VaultFactory/libraries/LibAppStorage.sol": "StorageLayout"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/Vault/libraries/LibKeepHelpers.sol": {
+        "keccak256": "0x5fe31c710dbfb3de2c2e4bb1ce6f100e0e6c74d7902227b0aec76497898ff24e",
+        "urls": [
+          "bzz-raw://4fe30d032683a6b38b7acabe84131e38015487507b326f245a4207eb26d64a50",
+          "dweb:/ipfs/QmS8mm7YDYb8RMdrFDUpVFYvd3DmitdEubMSksoL5GmXEx"
+        ],
+        "license": null
+      },
+      "contracts/VaultFactory/libraries/LibAppStorage.sol": {
+        "keccak256": "0xc6c6a873b9e4809b0b0ef9a451b0e21468ff133059c2d765ba6cf6404076883b",
+        "urls": [
+          "bzz-raw://add6ea87b9fad19a5722a9838ba2f8550f5f82455a4439fd0375d7b4252b0f21",
+          "dweb:/ipfs/QmYKvPPWFnNyLXNt8MTKr23jkCRABaJvkQm2qLWBG3q8iU"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/VaultFactory/libraries/LibAppStorage.sol",
+    "id": 7857,
+    "exportedSymbols": {
+      "FactoryAppStorage": [
+        7843
+      ],
+      "LibAppStorage": [
+        7852
+      ],
+      "LibKeepHelpers": [
+        6150
+      ],
+      "StorageLayout": [
+        7856
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:1219:16",
+    "nodes": [
+      {
+        "id": 7812,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 7813,
+        "nodeType": "ImportDirective",
+        "src": "25:50:16",
+        "nodes": [],
+        "absolutePath": "contracts/Vault/libraries/LibKeepHelpers.sol",
+        "file": "../../Vault/libraries/LibKeepHelpers.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 7857,
+        "sourceUnit": 6151,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 7843,
+        "nodeType": "StructDefinition",
+        "src": "77:566:16",
+        "nodes": [],
+        "canonicalName": "FactoryAppStorage",
+        "members": [
+          {
+            "constant": false,
+            "id": 7815,
+            "mutability": "mutable",
+            "name": "VAULTID",
+            "nameLocation": "137:7:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "129:15:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7814,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "129:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7817,
+            "mutability": "mutable",
+            "name": "diamondCutFacet",
+            "nameLocation": "285:15:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "277:23:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7816,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "277:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7819,
+            "mutability": "mutable",
+            "name": "erc20Facet",
+            "nameLocation": "314:10:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "306:18:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7818,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "306:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7821,
+            "mutability": "mutable",
+            "name": "erc721Facet",
+            "nameLocation": "338:11:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "330:19:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7820,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "330:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7823,
+            "mutability": "mutable",
+            "name": "erc1155Facet",
+            "nameLocation": "363:12:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "355:20:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7822,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "355:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7825,
+            "mutability": "mutable",
+            "name": "diamondLoupeFacet",
+            "nameLocation": "389:17:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "381:25:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7824,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "381:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7827,
+            "mutability": "mutable",
+            "name": "vaultFacet",
+            "nameLocation": "420:10:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "412:18:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7826,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "412:7:16",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7830,
+            "mutability": "mutable",
+            "name": "ERC20SELECTORS",
+            "nameLocation": "490:14:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "481:23:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+              "typeString": "bytes4[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7828,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "481:6:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "id": 7829,
+              "nodeType": "ArrayTypeName",
+              "src": "481:8:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+                "typeString": "bytes4[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7833,
+            "mutability": "mutable",
+            "name": "ERC721SELECTORS",
+            "nameLocation": "519:15:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "510:24:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+              "typeString": "bytes4[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7831,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "510:6:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "id": 7832,
+              "nodeType": "ArrayTypeName",
+              "src": "510:8:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+                "typeString": "bytes4[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7836,
+            "mutability": "mutable",
+            "name": "ERC1155SELECTORS",
+            "nameLocation": "549:16:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "540:25:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+              "typeString": "bytes4[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7834,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "540:6:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "id": 7835,
+              "nodeType": "ArrayTypeName",
+              "src": "540:8:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+                "typeString": "bytes4[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7839,
+            "mutability": "mutable",
+            "name": "DIAMONDLOUPEFACETSELECTORS",
+            "nameLocation": "580:26:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "571:35:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+              "typeString": "bytes4[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7837,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "571:6:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "id": 7838,
+              "nodeType": "ArrayTypeName",
+              "src": "571:8:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+                "typeString": "bytes4[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7842,
+            "mutability": "mutable",
+            "name": "VAULTFACETSELECTORS",
+            "nameLocation": "621:19:16",
+            "nodeType": "VariableDeclaration",
+            "scope": 7843,
+            "src": "612:28:16",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+              "typeString": "bytes4[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7840,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "612:6:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "id": 7841,
+              "nodeType": "ArrayTypeName",
+              "src": "612:8:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes4_$dyn_storage_ptr",
+                "typeString": "bytes4[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FactoryAppStorage",
+        "nameLocation": "84:17:16",
+        "scope": 7857,
+        "visibility": "public"
+      },
+      {
+        "id": 7852,
+        "nodeType": "ContractDefinition",
+        "src": "645:201:16",
+        "nodes": [
+          {
+            "id": 7851,
+            "nodeType": "FunctionDefinition",
+            "src": "673:171:16",
+            "nodes": [],
+            "body": {
+              "id": 7850,
+              "nodeType": "Block",
+              "src": "783:61:16",
+              "nodes": [],
+              "statements": [
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "802:36:16",
+                    "statements": [
+                      {
+                        "nodeType": "YulAssignment",
+                        "src": "816:12:16",
+                        "value": {
+                          "kind": "number",
+                          "nodeType": "YulLiteral",
+                          "src": "827:1:16",
+                          "type": "",
+                          "value": "0"
+                        },
+                        "variableNames": [
+                          {
+                            "name": "fs.slot",
+                            "nodeType": "YulIdentifier",
+                            "src": "816:7:16"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "evmVersion": "paris",
+                  "externalReferences": [
+                    {
+                      "declaration": 7847,
+                      "isOffset": false,
+                      "isSlot": true,
+                      "src": "816:7:16",
+                      "suffix": "slot",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 7849,
+                  "nodeType": "InlineAssembly",
+                  "src": "793:45:16"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "factoryAppStorage",
+            "nameLocation": "682:17:16",
+            "parameters": {
+              "id": 7844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "699:2:16"
+            },
+            "returnParameters": {
+              "id": 7848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7847,
+                  "mutability": "mutable",
+                  "name": "fs",
+                  "nameLocation": "775:2:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7851,
+                  "src": "749:28:16",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FactoryAppStorage_$7843_storage_ptr",
+                    "typeString": "struct FactoryAppStorage"
+                  },
+                  "typeName": {
+                    "id": 7846,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7845,
+                      "name": "FactoryAppStorage",
+                      "nameLocations": [
+                        "749:17:16"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7843,
+                      "src": "749:17:16"
+                    },
+                    "referencedDeclaration": 7843,
+                    "src": "749:17:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FactoryAppStorage_$7843_storage_ptr",
+                      "typeString": "struct FactoryAppStorage"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "748:30:16"
+            },
+            "scope": 7852,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LibAppStorage",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          7852
+        ],
+        "name": "LibAppStorage",
+        "nameLocation": "653:13:16",
+        "scope": 7857,
+        "usedErrors": []
+      },
+      {
+        "id": 7856,
+        "nodeType": "ContractDefinition",
+        "src": "848:370:16",
+        "nodes": [
+          {
+            "id": 7855,
+            "nodeType": "VariableDeclaration",
+            "src": "886:29:16",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "fs",
+            "nameLocation": "913:2:16",
+            "scope": 7856,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FactoryAppStorage_$7843_storage",
+              "typeString": "struct FactoryAppStorage"
+            },
+            "typeName": {
+              "id": 7854,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 7853,
+                "name": "FactoryAppStorage",
+                "nameLocations": [
+                  "886:17:16"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 7843,
+                "src": "886:17:16"
+              },
+              "referencedDeclaration": 7843,
+              "src": "886:17:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FactoryAppStorage_$7843_storage_ptr",
+                "typeString": "struct FactoryAppStorage"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "StorageLayout",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          7856
+        ],
+        "name": "StorageLayout",
+        "nameLocation": "866:13:16",
+        "scope": 7857,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 16
+}
