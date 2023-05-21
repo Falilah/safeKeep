@@ -82,6 +82,7 @@ contract VaultSpawnerFacet is StorageLayout {
         //upgrade
         IDiamondCut(addr).diamondCut(cut, address(0), "");
         //add inheritors if any
+
         if (_inheritors.length > 0) {
             IVaultFacet(addr).addInheritors(_inheritors, _weiShare);
         }

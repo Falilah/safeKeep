@@ -100,6 +100,7 @@ contract VaultFacet {
         uint256[] calldata _weiShare
     ) external {
         Guards._onlyVaultOwnerOrOrigin();
+        LibKeep._ping();
         LibKeep._addInheritors(_newInheritors, _weiShare);
     }
 
