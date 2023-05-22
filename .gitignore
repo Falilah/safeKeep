@@ -5,7 +5,8 @@ coverage.json
 typechain
 typechain-types
 broadcast
-out/
+out
+lib
 # Hardhat files
 cache
 artifacts

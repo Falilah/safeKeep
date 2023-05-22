@@ -10,7 +10,8 @@ import "../../interfaces/IVaultFacet.sol";
 
 contract VaultSpawnerFacet is StorageLayout {
     event VaultCreated(
-        address indexed owner,
+        address indexed newVault,
+        address owner,
         address indexed backup,
         uint256 indexed startingBalance,
         uint256 vaultID
@@ -87,7 +88,13 @@ contract VaultSpawnerFacet is StorageLayout {
             IVaultFacet(addr).addInheritors(_inheritors, _weiShare);
         }
 
-        emit VaultCreated(msg.sender, _backupAddress, _startingBal, fs.VAULTID);
+        emit VaultCreated(
+            addr,
+            msg.sender,
+            _backupAddress,
+            _startingBal,
+            fs.VAULTID
+        );
         fs.VAULTID++;
     }
 }
