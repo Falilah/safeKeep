@@ -31,3 +31,5 @@ Wagmi
 Mongodb
 
 ```
+
+Safekeep utilizes the EIP2535 DiamondFactory contract, which has been deployed on the Sepolia network. Users are able to create their own vaults, which also adhere to the EIP2535 standard, by accessing this network. Here is the address where the Daimond factory contract was deployed: [0x0beb2aC4c8409D6211a5c90f842230277110114d](https://sepolia.etherscan.io/address/0x0beb2aC4c8409D6211a5c90f842230277110114d#code)
